@@ -4,7 +4,7 @@ import React from 'react';
 const HeroSection = () => (
     <Box
       sx={{
-        backgroundImage: "url('../assets/HeroImg3.jpg')",
+        backgroundImage: "url('../assets/HeroImg4.avif')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: '#fff',

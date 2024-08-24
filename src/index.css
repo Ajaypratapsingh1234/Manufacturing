@@ -12,3 +12,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.logo:hover {
+  transform: scale(1.5); /* Enlarges the logo by 20% on hover */
+}
