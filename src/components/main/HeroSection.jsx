@@ -14,7 +14,7 @@ const HeroSection = () => (
     >
       <Container>
         <Typography variant="h1" gutterBottom>
-           Welcome to DigiLime India
+           Welcome to DigiLime Consulting
         </Typography>
         <Typography variant="h4" gutterBottom>
           Empowering Businesses with Innovative Solutions
