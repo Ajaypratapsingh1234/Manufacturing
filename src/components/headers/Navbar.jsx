@@ -93,7 +93,8 @@ function Navbar() {
       height: '50px',
       borderRadius: '50%', // Makes the logo circular
       objectFit: 'cover',  // Ensures the image covers the entire area of the circle
-      transition: 'transform 0.1s ease', // Smooth transition
+      transition: 'transform 0.1s ease',
+      marginTop: '20%' // Smooth transition
     }} 
     className="logo"
   />
