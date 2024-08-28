@@ -1,7 +1,16 @@
-import { Box, Container, Divider, Grid, Link, Typography } from '@mui/material';
-import React from 'react';
+import { Facebook, Instagram, LinkedIn, Twitter } from '@mui/icons-material';
+import { Box, Container, Divider, Grid, IconButton, Typography } from '@mui/material';
+import React, { useEffect } from 'react';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 
 const Footer = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll to top when route changes
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <Box
       sx={{
@@ -33,18 +42,26 @@ const Footer = () => {
               Quick Links
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-              <Link href="#" color="inherit" variant="body2" sx={{ mb: 1 }}>
-                Home
-              </Link>
-              <Link href="#" color="inherit" variant="body2" sx={{ mb: 1 }}>
-                About Us
-              </Link>
-              <Link href="#" color="inherit" variant="body2" sx={{ mb: 1 }}>
-                Services
-              </Link>
-              <Link href="#" color="inherit" variant="body2" sx={{ mb: 1 }}>
-                Contact
-              </Link>
+              <RouterLink to="/home" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Typography variant="body2" sx={{ mb: 1 }}>
+                  Home
+                </Typography>
+              </RouterLink>
+              <RouterLink to="/about-us" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Typography variant="body2" sx={{ mb: 1 }}>
+                  About Us
+                </Typography>
+              </RouterLink>
+              <RouterLink to="/consulting-and-services" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Typography variant="body2" sx={{ mb: 1 }}>
+                  Services
+                </Typography>
+              </RouterLink>
+              <RouterLink to="/contact-us" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Typography variant="body2" sx={{ mb: 1 }}>
+                  Contact
+                </Typography>
+              </RouterLink>
             </Box>
           </Grid>
 
@@ -54,14 +71,47 @@ const Footer = () => {
               Contact Us
             </Typography>
             <Typography variant="body2">
-              <strong>Address:</strong> 1234 Main Street, Anytown, USA
+              <strong>Address:</strong> A-12, KH No. 11/7/2, GF,Lakhi Ram Park Near Rohini Sector-22,Suleman Nagar, Kirari North West Delhi- 110086
             </Typography>
             <Typography variant="body2">
-              <strong>Phone:</strong> (123) 456-7890
+              <strong>Phone:</strong> +91 8076656173
             </Typography>
             <Typography variant="body2">
-              <strong>Email:</strong> info@example.com
+              <strong>Email:</strong> digilimeindia@gmail.com
             </Typography>
+          </Grid>
+        </Grid>
+
+        <Divider sx={{ my: 4, borderColor: '#555' }} />
+
+        <Grid container justifyContent="center" spacing={2}>
+          <Grid item>
+            <a href="https://www.facebook.com/Digilimeconsulting?mibextid=kFxxJD" target="_blank" rel="noopener noreferrer">
+              <IconButton sx={{ color: '#fff' }}>
+                <Facebook />
+              </IconButton>
+            </a>
+          </Grid>
+          <Grid item>
+            <a href="https://www.linkedin.com/company/digilime-india/" target="_blank" rel="noopener noreferrer">
+              <IconButton sx={{ color: '#fff' }}>
+                <LinkedIn />
+              </IconButton>
+            </a>
+          </Grid>
+          <Grid item>
+            <a href="https://x.com/Digilime_MRP?t=L-UdA1vTZmBaTyR5gfnebw&s=08" target="_blank" rel="noopener noreferrer">
+              <IconButton sx={{ color: '#fff' }}>
+                <Twitter />
+              </IconButton>
+            </a>
+          </Grid>
+          <Grid item>
+            <a href="https://www.instagram.com/digilime_consulting?igsh=MXdwb3ZvZWxyeGhhcQ==" target="_blank" rel="noopener noreferrer">
+              <IconButton sx={{ color: '#fff' }}>
+                <Instagram />
+              </IconButton>
+            </a>
           </Grid>
         </Grid>
 
