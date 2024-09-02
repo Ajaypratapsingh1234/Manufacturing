@@ -118,7 +118,7 @@ const Footer = () => {
         <Divider sx={{ my: 4, borderColor: '#555' }} />
 
         <Typography variant="body2" align="center">
-          &copy; {new Date().getFullYear()} Your Company Name. All rights reserved.
+          &copy; {new Date().getFullYear()} Digilime Consulting. All rights reserved.
         </Typography>
       </Container>
     </Box>

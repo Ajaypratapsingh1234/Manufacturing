@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const pages = ['Home', 'About Us', 'Consulting & Services', 'Industries', 'Blog', 'Case studies', 'Career', 'Contact Us'];
+const pages = ['Home', 'About Us', 'Consulting & Services', 'Blog', 'Case studies', 'Contact Us'];
 
 const consultingSubPages = [
   'Consulting & Services', // Add this to the list
